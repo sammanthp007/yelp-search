@@ -18,7 +18,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         tableView.delegate = self
-        tableView.dataSource = self 
+        tableView.dataSource = self
         
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
@@ -49,6 +49,20 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // how many cells
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if businesses != nil {
+            return businesses.count
+        } else {
+            return 0
+        }
+    }
+    
+    // views for each row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
     }
     
     /*
