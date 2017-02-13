@@ -20,8 +20,16 @@ class BusinessViewCellTableViewCell: UITableViewCell {
     @IBOutlet weak var distanceLabel: UILabel!
     
     var business: Business! {
+        // whenever cell.business is given a NSdictionary
         didSet {
             businessNameLabel.text = business.name
+            addressLabel.text = business.address
+            thumbImageView.setImageWith(business.imageURL!)
+            categoriesLabel.text = business.categories
+            reviewsCountLabel.text = "\(business.reviewCount)"
+            ratingStarImageView.setImageWith(business.ratingImageURL!)
+            costLabel.text = "$$"
+            distanceLabel.text = business.distance
         }
     }
     
