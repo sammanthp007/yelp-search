@@ -37,6 +37,10 @@ class BusinessViewCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        // make the thumbnail have curved edges
+        thumbImageView.layer.cornerRadius = 3
+        thumbImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
