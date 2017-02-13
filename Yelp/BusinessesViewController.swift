@@ -20,6 +20,12 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         
+        // make sure that tableview follows the autolayout constraints
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // for scroll bar, but is a must
+        tableView.estimatedRowHeight = 120
+        
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
