@@ -41,6 +41,14 @@ class BusinessViewCellTableViewCell: UITableViewCell {
         // make the thumbnail have curved edges
         thumbImageView.layer.cornerRadius = 3
         thumbImageView.clipsToBounds = true
+        
+        // So as to make wrapping of labels to the width of the label
+        businessNameLabel.preferredMaxLayoutWidth = businessNameLabel.frame.size.width
+    }
+    
+    override func layoutSubviews() {
+        // So as to make wrapping of labels to the width of the label
+        businessNameLabel.preferredMaxLayoutWidth = businessNameLabel.frame.size.width
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
