@@ -23,6 +23,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
+            self.tableView.reloadData()
             if let businesses = businesses {
                 for business in businesses {
                     print(business.name!)
@@ -60,9 +61,12 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    // views for each row
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+    // for each cell in the table
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath) as! BusinessViewCellTableViewCell
+        
+        cell.business = self.businesses[indexPath.row]
+        return cell
     }
     
     /*

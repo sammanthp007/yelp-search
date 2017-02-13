@@ -19,6 +19,11 @@ class BusinessViewCellTableViewCell: UITableViewCell {
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     
+    var business: Business! {
+        didSet {
+            businessNameLabel.text = business.name
+        }
+    }
     
     
     override func awakeFromNib() {
