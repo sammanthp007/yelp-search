@@ -1,43 +1,8 @@
-### Basic Yelp client
-
-This is a headless example of how to implement an OAuth 1.0a Yelp API client. The Yelp API provides an application token that allows applications to make unauthenticated requests to their search API.
-
-### Next steps
-
-- Check out `BusinessesViewController.swift` to see how to use the `Business` model.
-
-### Sample request
-
-**Basic search with query**
-
-```
-Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
-    self.businesses = businesses
-    
-    for business in businesses {
-        print(business.name!)
-        print(business.address!)
-    }
-})
-```
-
-**Advanced search with categories, sort, and deal filters**
-
-```
-Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
-
-    for business in businesses {
-        print(business.name!)
-        print(business.address!)
-    }
-}
-```
-
 # Project 3 - Yelp-Search
 
 Yelp-Search is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
 
-Time spent: **X** hours spent in total
+Time spent: 3 hours spent in total
 
 ## User Stories
 
@@ -67,7 +32,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/sammanthp007/yelp-search/blob/master/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
