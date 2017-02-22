@@ -31,11 +31,11 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="103" id="tul-pG-jpO" customClass="BusinessViewCellTableViewCell" customModule="Yelp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="103" id="tul-pG-jpO" customClass="BusinessViewCellTableViewCell" customModule="Yelp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tul-pG-jpO" id="Co9-n4-LMU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLq-js-OD4">
@@ -53,13 +53,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-aR-eQq">
-                                                    <rect key="frame" x="81" y="4" width="129" height="21"/>
+                                                    <rect key="frame" x="81" y="4" width="96" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.07mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMw-Dq-Z86">
-                                                    <rect key="frame" x="327" y="4" width="41" height="16"/>
+                                                    <rect key="frame" x="294" y="4" width="41" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.58575534326424872" green="0.58575534326424872" blue="0.58575534326424872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-p8-obh">
-                                                    <rect key="frame" x="342" y="28" width="17" height="16"/>
+                                                    <rect key="frame" x="309" y="28" width="17" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.58575534326424872" green="0.58575534326424872" blue="0.58575534326424872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -121,6 +121,7 @@
                                             <outlet property="ratingStarImageView" destination="DqA-n5-loS" id="F4Q-yC-G3b"/>
                                             <outlet property="reviewsCountLabel" destination="nwZ-Rd-NJM" id="hFP-Vh-9tb"/>
                                             <outlet property="thumbImageView" destination="bLq-js-OD4" id="feJ-Hn-hTE"/>
+                                            <segue destination="1MP-Yj-OUU" kind="push" id="uTQ-cu-Mdw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -143,6 +144,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgb-4b-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2663.1999999999998" y="347.67616191904051"/>
+        </scene>
+        <!--Business Detail View Controller-->
+        <scene sceneID="giy-hd-RfM">
+            <objects>
+                <viewController id="1MP-Yj-OUU" customClass="BusinessDetailViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YTF-dY-mPx"/>
+                        <viewControllerLayoutGuide type="bottom" id="3U2-lb-Es4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oPl-CX-poF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DTt-pO-lm0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4P4-AD-nrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3679" y="331"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wd9-oY-MVF">
